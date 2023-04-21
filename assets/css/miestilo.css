@@ -1,0 +1,115 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+@font-face {
+  font-family: rochester;
+  src: url("../fonts/Rochester-Regular.ttf");
+}
+@font-face {
+  font-family: handlee;
+  src: url("../fonts/Handlee-Regular.ttf");
+}
+
+.font-rochester {
+  font-family: rochester;
+}
+
+.font-handlee {
+  font-family: handlee;
+}
+
+.bg-ponya {
+  background-image: url("../img/background-ponya.jpg");
+  background-attachment: fixed;
+}
+
+.bg-color-1 {
+  background-color: #34422c;
+  color: #fafafa;
+}
+
+.bg-color-2 {
+  background-color: #addc91;
+}
+
+.color-1 {
+  color: #34422c;
+}
+
+.color-2 {
+  color: #addc91;
+}
+
+/* HERO CAROUSEL */
+.carousel_img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel_caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hover-zoom {
+  overflow: hidden;
+  /* margin: 0 auto; */
+}
+
+.hover-zoom img {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+
+.hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+.separador-horizontal-100::before {
+  content: "";
+  width: 100px;
+  height: 0.2rem;
+  display: block;
+  margin: 0 auto 1.9rem;
+  border-top: 0.5px solid #b3b3b3;
+}
+
+/* .separador-vertical::before {
+  background: #addc91;
+  width: 4px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: -1;
+  display: block;
+} */
+
+.separador-vertical:before {
+  content: "";
+  width: 4px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 1.9rem;
+  /* border-top: 0.5px solid #b3b3b3; */
+  background: #addc91;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.icon-color-white {
+  filter: invert(100%) sepia(0%) saturate(7223%) hue-rotate(190deg)
+    brightness(107%) contrast(96%);
+}
