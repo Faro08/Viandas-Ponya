@@ -36,4 +36,13 @@ class Home extends BaseController
         echo view('front/contact_us');
         echo view('front/footer_view');
     }
+
+    public function wip()
+    {
+        $data['titulo']='wip';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/wip_page');
+        echo view('front/footer_view');
+    }
 }

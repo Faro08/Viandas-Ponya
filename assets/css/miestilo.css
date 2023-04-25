@@ -2,7 +2,21 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: roboto, sans-serif;
+}
+
+:root {
+  --green1: #34422c;
+  --green2: #addc91;
+  --green3: #76902e;
+  --orange1: #d28f02;
+  --orange2: #9b4d0d;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @font-face {
@@ -13,7 +27,10 @@
   font-family: handlee;
   src: url("../fonts/Handlee-Regular.ttf");
 }
-
+@font-face {
+  font-family: roboto;
+  src: url("../fonts/Roboto-Light.ttf");
+}
 .font-rochester {
   font-family: rochester;
 }
@@ -22,43 +39,97 @@
   font-family: handlee;
 }
 
+.bg-header {
+  background-color: var(--green1);
+}
+
+.header-logo {
+  /* max-width: 376px; */
+  max-height: 70px;
+}
+
+.nav-container {
+  max-width: 1440px;
+}
+
 .bg-ponya {
   background-image: url("../img/background-ponya.jpg");
   background-attachment: fixed;
 }
 
+/* .bg-about {
+  background-image: url("../img/penne-pasta-salsa-tomate-pollo-tomates-mesa-madera.jpg");
+  background-attachment: fixed;
+  background-repeat: none;
+  object-fit: contain;
+} */
+
 .bg-color-1 {
-  background-color: #34422c;
+  background-color: var(--green1);
   color: #fafafa;
 }
 
 .bg-color-2 {
-  background-color: #addc91;
+  background-color: var(--green2);
 }
 
 .color-1 {
-  color: #34422c;
+  color: var(--green1);
 }
 
 .color-2 {
-  color: #addc91;
+  color: var(--green2);
+}
+.color-3 {
+  color: var(--green3);
+}
+.color-4 {
+  color: var(--orange1);
+}
+.color-5 {
+  color: var(--orange2);
+}
+
+.icon-color-white {
+  filter: invert(100%) sepia(0%) saturate(7223%) hue-rotate(190deg)
+    brightness(107%) contrast(96%);
+}
+
+.icon-color-green1 {
+  filter: invert(33%) sepia(23%) saturate(537%) hue-rotate(55deg)
+    brightness(97%) contrast(93%);
+}
+
+.icon-color-green2 {
+  filter: invert(90%) sepia(20%) saturate(692%) hue-rotate(42deg)
+    brightness(93%) contrast(85%);
+}
+
+.icon-color-orange1 {
+  filter: invert(58%) sepia(67%) saturate(1004%) hue-rotate(5deg)
+    brightness(88%) contrast(98%);
+}
+
+main {
+  padding-top: 96px;
+  flex: 1;
 }
 
 /* HERO CAROUSEL */
+.hero-carousel-mask {
+  height: calc(100vh - 96px);
+  position: absolute;
+  z-index: 999;
+}
+
+.hero-carousel {
+  height: calc(100vh - 96px);
+}
+
 .carousel_img {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-}
-
-.carousel_caption {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .hover-zoom {
@@ -84,32 +155,92 @@
   border-top: 0.5px solid #b3b3b3;
 }
 
-/* .separador-vertical::before {
-  background: #addc91;
-  width: 4px;
-  height: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
+.separador-titulo-200::after {
   content: "";
-  z-index: -1;
-  display: block;
-} */
-
-.separador-vertical:before {
-  content: "";
-  width: 4px;
-  height: 100px;
+  width: 150px;
+  height: 0.2rem;
   display: block;
   margin: 0 auto 1.9rem;
-  /* border-top: 0.5px solid #b3b3b3; */
-  background: #addc91;
-  left: 0;
-  position: absolute;
-  z-index: -1;
+  border-bottom: 0.5px solid var(--green3);
 }
 
-.icon-color-white {
-  filter: invert(100%) sepia(0%) saturate(7223%) hue-rotate(190deg)
-    brightness(107%) contrast(96%);
+.separador-hero::after {
+  content: "";
+  /* width: 350px; */
+  width: 80%;
+  height: 0.2rem;
+  display: block;
+  margin: 0 auto 1.9rem;
+  margin-top: 10px;
+  /* border-bottom: 0.5px solid var(--green2); */
+  border-bottom: 0.1px solid #bebebe;
+}
+
+/* .img-border-inside::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  height: 20px;
+  inset: 20px;
+   left: 20px;
+  top: 20px;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+} */
+
+.separador-vertical-left:before {
+  content: "";
+  height: 80px;
+  /* display: block; */
+  margin: 0 auto 1.9rem;
+  margin-right: 20px;
+  border-left: 5px solid var(--green3);
+  /* z-index: -1; */
+  /* position: absolute; */
+}
+
+.container-about {
+  max-width: 960px;
+}
+
+.container-commerce {
+  max-width: 960px;
+}
+
+.button-ordenarOnline {
+  background-color: var(--green1);
+  color: white;
+}
+
+.button-ordenarOnline:hover {
+  background-color: var(--green2);
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  /* position: absolute; */
+  bottom: 0;
+  background-color: #1f1f1f;
+  background-image: url("../img/background-madera.jpg");
+  padding-bottom: 20px;
+}
+
+@media (max-width: 425px) {
+  .navbar-brand {
+    max-width: 223px;
+  }
+  main {
+    padding-top: 67.5px;
+  }
+  .about-step-img {
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info-items {
+    justify-content: center;
+  }
 }

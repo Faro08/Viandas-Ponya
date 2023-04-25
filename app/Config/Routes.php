@@ -33,6 +33,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/about', 'Home::about');
 $routes->get('/commerce', 'Home::commerce');
 $routes->get('/contact', 'Home::contact');
+$routes->get('/wip', 'Home::wip');
 
 /*
  * --------------------------------------------------------------------
