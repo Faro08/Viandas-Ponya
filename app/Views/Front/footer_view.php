@@ -1,7 +1,7 @@
 <!-- <footer class="container-fluid  text-white"> -->
-<footer class="container-fluid   text-white">
+<footer class="container-fluid text-white">
     <div class="container text-center">
-        <div class="row">
+        <div class="row footer-row-max-width">
 
             <div class="col p-4 pb-0 text-start">
                 <div class="container d-flex p-1"><img class="icon-color-white me-3"

@@ -227,7 +227,15 @@ footer {
   padding-bottom: 20px;
 }
 
-@media (max-width: 425px) {
+.footer-row-max-width {
+  max-width: 960px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
   .navbar-brand {
     max-width: 223px;
   }
