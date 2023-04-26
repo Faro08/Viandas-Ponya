@@ -24,6 +24,8 @@
                     </div>
                     <button class="btn btn-lg button-ordenarOnline font-handlee mb-5"
                         style="width:200px;">Enviar</button>
+                    <button class="btn btn-lg button-ordenarOnline font-handlee mb-5" style="width:200px;"
+                        type="reset">Limpiar</button>
                 </form>
             </div>
             <div class="col-lg-5 pt-4 pb-4">
