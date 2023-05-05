@@ -34,6 +34,8 @@ $routes->get('/about', 'Home::about');
 $routes->get('/commerce', 'Home::commerce');
 $routes->get('/contact', 'Home::contact');
 $routes->get('/wip', 'Home::wip');
+$routes->get('/products', 'Home::products');
+$routes->get('/services', 'Home::services');
 
 /*
  * --------------------------------------------------------------------

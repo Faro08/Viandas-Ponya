@@ -25,7 +25,7 @@
                                 Plato del dia
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Carne</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('products');?>">Carne</a></li>
                                 <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Vegetariano</a></li>
                                 <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Saludable</a></li>
 
