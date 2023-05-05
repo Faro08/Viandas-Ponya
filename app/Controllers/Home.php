@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        $data['titulo']='home';
+        $data['titulo']='Home';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('front/home_page');
@@ -14,7 +14,7 @@ class Home extends BaseController
     }
     public function about()
     {
-        $data['titulo']='about';
+        $data['titulo']='About';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('front/about_us');
@@ -22,7 +22,7 @@ class Home extends BaseController
     }
     public function commerce()
     {
-        $data['titulo']='commerce';
+        $data['titulo']='Commerce';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('front/commerce');
@@ -30,7 +30,7 @@ class Home extends BaseController
     }
     public function contact()
     {
-        $data['titulo']='contact';
+        $data['titulo']='Contact';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('front/contact_us');

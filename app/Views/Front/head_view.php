@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <title>Viandas Ponya</title>
+    <!-- <title>Viandas Ponya</title> -->
+    <title>Viandas Ponya - <?php echo $titulo;?></title>
     <meta charset="UTF-8">
     <link rel="icon" href="assets/img/food-and-restaurant.png" />
     <meta name="description" content="Venta de comida y Viandas frescas">
