@@ -52,7 +52,8 @@ class Home extends BaseController
         echo view('front/contact_us');
         echo view('front/footer_view');
     }
-
+    
+    //PAGINA EN CONSTRUCCION
     public function wip()
     {
         $data['titulo']='wip';
@@ -61,4 +62,5 @@ class Home extends BaseController
         echo view('front/wip_page');
         echo view('front/footer_view');
     }
+
 }

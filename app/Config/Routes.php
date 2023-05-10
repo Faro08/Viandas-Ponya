@@ -37,6 +37,10 @@ $routes->get('/wip', 'Home::wip');
 $routes->get('/products', 'Home::products');
 $routes->get('/services', 'Home::services');
 
+$routes->get('/register', 'Usuario_controller::create');
+$routes->post('/send-form', 'Usuario_controller::formValidation');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
