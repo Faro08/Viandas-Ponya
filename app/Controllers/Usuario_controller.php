@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
-Use App\Models\Usuarios_model;
 use CodeIgniter\Controller;
+Use App\Models\Usuarios_model;
 
 class Usuario_controller extends Controller{
 

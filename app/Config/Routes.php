@@ -40,6 +40,10 @@ $routes->get('/services', 'Home::services');
 $routes->get('/register', 'Usuario_controller::create');
 $routes->post('/send-form', 'Usuario_controller::formValidation');
 
+$routes->get('/login', 'Login_controller');
+$routes->post('/send-login', 'Login_controller::auth');
+$routes->get('/panel', 'Panel_controller::index',['filter' => 'auth']);
+$routes->get('/logout', 'Login_controller::logout');
 
 /*
  * --------------------------------------------------------------------

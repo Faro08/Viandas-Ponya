@@ -62,7 +62,7 @@
                                     height="25" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i></a> -->
 
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Ingresar</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('login');?>">Ingresar</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>

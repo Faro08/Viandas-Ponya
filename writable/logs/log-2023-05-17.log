@@ -1,0 +1,238 @@
+INFO - 2023-05-17 18:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 18:28:56 --> Unclosed '{' on line 7
+in APPPATH\Controllers\Login_Controller.php on line 56.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Controllers\\Login_controller.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Login_controller')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Login_controller')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Login_controller', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-17 18:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 19:14:24 --> Undefined constant "Config\app"
+in SYSTEMPATH\Config\Factories.php on line 129.
+ 1 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 3 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+ 5 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+ 6 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:14:39 --> Undefined constant "Config\app"
+in SYSTEMPATH\Config\Factories.php on line 129.
+ 1 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 3 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+ 5 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+ 6 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-17 19:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:24:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 19:42:16 --> "auth" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:50:34 --> Undefined constant "Config\app"
+in SYSTEMPATH\Config\Factories.php on line 129.
+ 1 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 3 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+ 5 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+ 6 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:50:37 --> Undefined constant "Config\app"
+in SYSTEMPATH\Config\Factories.php on line 129.
+ 1 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 3 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+ 5 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+ 6 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-17 19:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 19:51:25 --> Class "Config\Auth" not found
+in SYSTEMPATH\Filters\Filters.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('panel', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:53:27 --> Undefined constant "Config\app"
+in SYSTEMPATH\Config\Factories.php on line 129.
+ 1 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 3 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+ 5 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+ 6 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:53:28 --> Undefined constant "Config\app"
+in SYSTEMPATH\Config\Factories.php on line 129.
+ 1 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 3 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+ 5 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+ 6 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:53:29 --> Undefined constant "Config\app"
+in SYSTEMPATH\Config\Factories.php on line 129.
+ 1 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 3 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+ 5 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+ 6 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-17 19:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 19:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 19:53:52 --> Class "Config\Auth" not found
+in SYSTEMPATH\Filters\Filters.php on line 166.
+ 1 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('panel', 'before')
+ 2 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:55:59 --> syntax error, unexpected token "."
+in APPPATH\Config\Filters.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Config\\Filters.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Filters')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Filters')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('Config\\Filters')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'Filters')
+ 6 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 7 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 8 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 9 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+10 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+11 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+12 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:56:04 --> syntax error, unexpected token "."
+in APPPATH\Config\Filters.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Config\\Filters.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Filters')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Filters')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('Config\\Filters')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'Filters')
+ 6 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 7 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 8 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 9 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+10 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+11 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+12 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:56:17 --> Undefined constant "Config\Filters"
+in SYSTEMPATH\Config\Factories.php on line 129.
+ 1 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 3 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+ 5 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+ 6 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:56:25 --> syntax error, unexpected token "/"
+in APPPATH\Config\Filters.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Config\\Filters.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Filters')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Filters')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('Config\\Filters')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'Filters')
+ 6 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 7 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 8 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 9 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+10 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+11 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+12 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 19:56:26 --> syntax error, unexpected token "/"
+in APPPATH\Config\Filters.php on line 25.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Config\\Filters.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Filters')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Filters')
+ 4 SYSTEMPATH\Config\Factories.php(155): class_exists('Config\\Filters')
+ 5 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'Filters')
+ 6 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 7 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 8 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 9 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+10 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+11 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+12 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-17 19:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 20:00:25 --> Undefined constant "Config\App"
+in SYSTEMPATH\Config\Factories.php on line 129.
+ 1 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 3 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+ 5 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+ 6 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 20:00:32 --> Undefined constant "Config\app"
+in SYSTEMPATH\Config\Factories.php on line 129.
+ 1 SYSTEMPATH\Common.php(216): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 2 SYSTEMPATH\Config\Services.php(285): config('Filters')
+ 3 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters(null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('filters', [...])
+ 5 SYSTEMPATH\Config\Services.php(282): CodeIgniter\Config\BaseService::getSharedInstance('filters', null)
+ 6 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::filters()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\Config\BaseService::__callStatic('filters', [])
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-17 20:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-17 20:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-17 20:00:42 --> "auth" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
