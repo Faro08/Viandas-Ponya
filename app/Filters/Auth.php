@@ -1,12 +1,14 @@
-<? php namespace App/Filters;
-use CodeIgniter/HTTP/RequestInterface;
-use CodeIgniter/HTTP/ResponseInterface;
-use CodeIgniter/Filterfs/FilterInterface;
+<?php 
+namespace App\Filters;
+use CodeIgniter\HTTP\RequestInterface;
+use CodeIgniter\HTTP\ResponseInterface;
+use CodeIgniter\Filters\FilterInterface;
 class Auth implements FilterInterface{
     public function before(RequestInterface $request, $arguments = null){
         //si no esta logeado
         if(!session()->get('logged_in')){
-            return redirect()->to('/login');
+            return redirect()->to('welcome');
+            
         }
     }
 
@@ -15,4 +17,3 @@ class Auth implements FilterInterface{
         console.log("aaaa");
     }
 }
-?>

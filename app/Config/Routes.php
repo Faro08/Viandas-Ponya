@@ -45,6 +45,11 @@ $routes->post('/send-login', 'Login_controller::auth');
 $routes->get('/panel', 'Panel_controller::index',['filter' => 'auth']);
 $routes->get('/logout', 'Login_controller::logout');
 
+$routes->get('/welcome', 'Home::welcome');
+
+
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

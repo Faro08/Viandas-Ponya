@@ -47,11 +47,11 @@ class Login_controller extends BaseController
                 return redirect()->to('/panel');
             }else{
                 $session->setFlashdata('msg', 'Contraseña incorrecta');
-                return redirect()->to('');
+                return redirect()->to('/panel');
             }
         }else{
             $session->setFlashdata('msg', 'No existe el usuario o email incorrecto');
-            return redirect()->to('');
+            return redirect()->to('/panel');
         }
     }
 

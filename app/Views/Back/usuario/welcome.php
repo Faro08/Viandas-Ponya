@@ -10,15 +10,18 @@
             <br><br>
             <?php if(session()->perfil_id == 1): ?>
             <div>
-                <img class="center" height="100px" width="80px" src="<?php echo base_url ('img/admin.jpg');?>"
-                    alt="img admin">
+                <!-- <img class="center" height="100px" width="80px" src="<?php echo base_url ('img/admin.jpg');?>"
+                    alt="img admin"> -->
+                <h1>Bienvenido admin</h1>
             </div>
 
 
             <?php elseif(session()->perfil_id == 2): ?>
             <div>
-                <img class="center" height="100px" width="80px" src="<?php echo base_url ('img/carrito.jpg');?>"
-                    alt="img admin">
+                <!-- <img class="center" height="100px" width="80px" src="<?php echo base_url ('img/carrito.jpg');?>"
+                    alt="img admin"> -->
+                <h1>Bienvenido usuario</h1>
+
             </div>
 
             <?php endif;?>

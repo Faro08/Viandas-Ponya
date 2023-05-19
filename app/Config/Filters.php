@@ -22,7 +22,7 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
         // filtro de autorizado
-        'auth' => app/Filters/Auth::class,
+        'auth' => \App\Filters\Auth::class,
     ];
 
     /**
