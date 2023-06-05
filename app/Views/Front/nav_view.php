@@ -13,6 +13,15 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <?php if (session()->perfil_id ==1): ?>
+                <div class="btn btn-danger active  btnUser btn-sm">
+                    <a href="">ADMIN:<?php echo session('nombre'); ?> </a>
+                </div>
+                <?php elseif(session()->perfil_id == 2): ?>
+                <div class="btn btn-danger active  btnUser btn-sm">
+                    <a href="">USUARIO:<?php echo session('nombre'); ?> </a>
+                </div>
+                <?php endif; ?>
                 <div class="collapse navbar-collapse " id="navbarNav">
                     <ul class="navbar-nav ms-auto text-white ">
 
