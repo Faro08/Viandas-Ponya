@@ -44,10 +44,12 @@ class Login_controller extends BaseController
                 $session->set($ses_data);
 
                 session()->setFlashdata('msg', 'Bienvenido!');
-                return redirect()->to('/welcome');
+                return redirect()->to('');
+                /* return redirect()->to('/welcome'); */
             }else{
                 $session->setFlashdata('msg', 'Contraseña incorrecta');
-                return redirect()->to('/welcome');
+                return redirect()->to('');
+                /* return redirect()->to('/welcome'); */
             }
         }else{
             $session->setFlashdata('msg', 'No existe el usuario o email incorrecto');
@@ -56,7 +58,7 @@ class Login_controller extends BaseController
     }
 
     public function logout(){
-        $sesion = session();
+        $session = session();
         $session->destroy();
         return redirect()->to('');
     }

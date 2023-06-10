@@ -30,7 +30,7 @@
                             <a class="nav-link" href="<?php echo base_url('about');?>">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('commerce');?>">Clientes</a>
+                            <a class="nav-link" href="<?php echo base_url('commerce');?>">Usuarios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('contact');?>">Ventas</a>
@@ -207,78 +207,7 @@
 
                 <?php endif; ?>
 
-                <div class="collapse navbar-collapse " id="navbarNav">
-                    <ul class="navbar-nav ms-auto text-white ">
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('');?>">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Plato del dia
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?php echo base_url('products');?>">Carne</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Vegetariano</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Saludable</a></li>
-
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Viandas
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Semanales</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Mensuales</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('about');?>">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('commerce');?>">Como comprar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('contact');?>">Contacto</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img class="icon-color-white"
-                                    src="<?php echo base_url("assets/bootstrap-icons-1.10.4/person-circle.svg");?>"
-                                    alt="icono usuario" width="25" height="25">
-                            </a>
-                            <!--  <a class="nav-item dropdown-toggle" role="button"><img class="icon-color-white"
-                                    src="assets/bootstrap-icons-1.10.4/person-fill.svg" alt="icono facebook" width="25"
-                                    height="25" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i></a> -->
-
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?php echo base_url('login');?>">Ingresar</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('register');?>">Registrarse</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('logout');?>">Salir</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('contact');?>"><img class="icon-color-white"
-                                    src="<?php echo base_url("assets/bootstrap-icons-1.10.4/cart.svg");?>"
-                                    alt="icono carrito" width="25" height="25">
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
