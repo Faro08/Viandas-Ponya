@@ -1,0 +1,169 @@
+INFO - 2023-06-13 00:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 00:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 00:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 00:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 00:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 00:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 00:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 00:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 00:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 03:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 04:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 04:00:37 --> Invalid file: "front/producto_nuevo_view.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/producto_nuevo_view.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('front/producto_nuevo_view', [], true)
+ 3 APPPATH\Controllers\Home.php(44): view('front/producto_nuevo_view')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 04:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 04:02:02 --> include(producto_controller.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 4.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(producto_controller.php): Failed to open stream: No such file or directory', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 4)
+ 2 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): include()
+ 3 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 6 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 04:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 04:02:27 --> include(Producto_controller.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 4.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Producto_controller.php): Failed to open stream: No such file or directory', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 4)
+ 2 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): include()
+ 3 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 6 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 04:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 04:04:39 --> include(Producto_controller.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 4.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Producto_controller.php): Failed to open stream: No such file or directory', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 4)
+ 2 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): include()
+ 3 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 6 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 04:05:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 04:05:15 --> include(Producto_controller.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 4.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Producto_controller.php): Failed to open stream: No such file or directory', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 4)
+ 2 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): include()
+ 3 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 6 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 04:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 04:14:43 --> include(Producto_controller.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 4.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Producto_controller.php): Failed to open stream: No such file or directory', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 4)
+ 2 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): include()
+ 3 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 6 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 04:15:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 04:15:47 --> include(Producto_controller.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 4.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Producto_controller.php): Failed to open stream: No such file or directory', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 4)
+ 2 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): include()
+ 3 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 6 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 04:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 05:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 05:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 05:19:12 --> include(Producto_controller.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 4.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Producto_controller.php): Failed to open stream: No such file or directory', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 4)
+ 2 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): include()
+ 3 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 6 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 05:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 05:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 05:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 05:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 05:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 05:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 05:22:28 --> include(Producto_controller.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 4.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Producto_controller.php): Failed to open stream: No such file or directory', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 4)
+ 2 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): include()
+ 3 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 6 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 05:22:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 05:22:46 --> Undefined variable $producto
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 23.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 5 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 05:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 05:23:07 --> include(Producto_controller.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 4.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Producto_controller.php): Failed to open stream: No such file or directory', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 4)
+ 2 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): include()
+ 3 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 6 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 05:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 05:27:55 --> include(Producto_controller.php): Failed to open stream: No such file or directory
+in APPPATH\Views\Back\productos\producto_nuevo_view.php on line 4.
+ 1 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(Producto_controller.php): Failed to open stream: No such file or directory', 'D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php', 4)
+ 2 APPPATH\Views\Back\productos\producto_nuevo_view.php(4): include()
+ 3 SYSTEMPATH\View\View.php(213): include('D:\\xampp\\htdocs\\proyecto_GonzalezPasi\\app\\Views\\Back\\productos\\producto_nuevo_view.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/productos/producto_nuevo_view', [], true)
+ 6 APPPATH\Controllers\Home.php(44): view('back/productos/producto_nuevo_view')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->products()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

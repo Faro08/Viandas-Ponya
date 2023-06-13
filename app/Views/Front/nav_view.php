@@ -35,6 +35,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('contact');?>">Ventas</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo base_url('contact');?>">Consultas</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">

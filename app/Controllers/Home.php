@@ -41,7 +41,7 @@ class Home extends BaseController
         $data['titulo']='Platos';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
-        echo view('front/products_view');
+        echo view('back/productos/producto_nuevo_view');
         echo view('front/footer_view');
     }
     public function services()

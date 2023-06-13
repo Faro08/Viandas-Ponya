@@ -2,7 +2,7 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class productps_model extends Model 
+class productos_model extends Model 
 {
     protected $table = 'productos';
     protected $primaryKey = 'id';

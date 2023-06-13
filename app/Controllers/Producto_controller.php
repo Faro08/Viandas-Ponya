@@ -1,9 +1,9 @@
 <?php
 namespace App\Controllers;
-Use App\Models\Producto_Model;
-Use App\Models\Usuario_Model;
-Use App\Models\Ventas_cabecera_model;
-Use App\Models\Ventas_detalle_model;
+Use App\Models\productos_model;
+Use App\Models\usuarios_model;
+Use App\Models\ventas_cabecera_model;
+Use App\Models\ventas_detalle_model;
 Use App\Models\categoria_model;
 use CodeIgniter\Controller;
 
@@ -17,7 +17,7 @@ class Productocontroller extends Controller
     // mostrar los productos en lista
     public function index()
     {
-        $productoModel = new Producto_Model();
+        $productoModel = new producto_model();
         $data['producto'] = $productoModel->orderBy('id', 'DESC')->findAll();
       
         $dato['titulo']='Crud_productos'; 
@@ -33,7 +33,7 @@ class Productocontroller extends Controller
         // traer todas las categorias desde la db
        $data['categorias'] = $categoriasmodel->getCategorias();
     
-        $productoModel = new Producto_Model();
+        $productoModel = new producto_model();
         $data['obj'] = $productoModel->orderBy('id', 'DESC')->findAll();
       
         $dato['titulo']='Alta producto'; 
@@ -48,13 +48,13 @@ class Productocontroller extends Controller
                         
             'nombre_prod' =>'required|min_length[2]',
             'categoria'=>'is_not_unique[categorias.id]',
-            'precio'  => 'required',
-            'precio_vta'  => 'required',
+            'costo'  => 'required',
+            'precio_venta'  => 'required',
             'stock'  => 'required',
             'stock_min' => 'required'
           ]);
         
-        $productoModel = new Producto_Model();
+        $productoModel = new producto_model();
  
         if (!$input) {
                $dato['titulo']='Alta'; 
@@ -74,25 +74,25 @@ class Productocontroller extends Controller
                    'imagen' => $img->getName(),
                     // completar con los demas campos
                     'categoria_id' => $this->request->getVar('categoria'),
-                    'precio' => $this->request->getVar('precio'),
-                    'precio_vta' => $this->request->getVar('precio_vta'),
+                    'costo' => $this->request->getVar('costo'),
+                    'precio_venta' => $this->request->getVar('precio_venta'),
                     'stock' => $this->request->getVar('stock'),
                     'stock_min' => $this->request->getVar('stock_min'),
                      //'eliminado' => NO
             ];
            
-              $producto = new Producto_Model();
+              $producto = new producto_model();
               $producto->insert($data);
              
               return $this->response->redirect(site_url('crear'));
 
-    }
-  }
+        }
+       }
         
       // show single producto
     public function singleproducto($id = null){
         
-        $productoModel = new Producto_Model();
+        $productoModel = new producto_model();
         $data['old'] = $productoModel->where('id', $id)->first();
 
          if (empty($data['old'])) {
@@ -113,7 +113,7 @@ class Productocontroller extends Controller
 
         // update de productos (modificacion)
     public function modifica($id){
-        $productoModel = new Producto_Model();
+        $productoModel = new producto_model();
         $id = $productoModel->where('id', $id)->first();
 
          $img = $this->request->getFile('imagen');
@@ -127,8 +127,8 @@ class Productocontroller extends Controller
                     'imagen' => $img->getName(),
                     // completar con los demas campos
                     'categoria_id' => $this->request->getVar('categoria'),
-                    'precio' => $this->request->getVar('precio'),
-                    'precio_vta' => $this->request->getVar('precio_vta'),
+                    'costo' => $this->request->getVar('costo'),
+                    'precio_venta' => $this->request->getVar('precio_venta'),
                     'stock' => $this->request->getVar('stock'),
                     'stock_min' => $this->request->getVar('stock_min'),
                    // 'eliminado' => 'NO',
@@ -140,7 +140,7 @@ class Productocontroller extends Controller
     //eliminar lógicamente 
       public function deleteproducto($id)
         {
-          $productoModel = new Producto_Model();
+          $productoModel = new producto_model();
           $data['eliminado'] = $productoModel->where('id', $id)->first();
           $data['eliminado'] = 'SI';
           $productoModel->update($id, $data);
@@ -150,7 +150,7 @@ class Productocontroller extends Controller
       public function eliminados()
       {
       
-          $productoModel = new Producto_Model();
+          $productoModel = new producto_model();
           $data['producto'] = $productoModel->orderBy('id', 'DESC')->findAll();
           $dato['titulo']='Crud_productos'; 
           echo view('front/head_view_crud', $dato);
@@ -161,7 +161,7 @@ class Productocontroller extends Controller
 
      public function activarproducto($id)
         {
-          $productoModel = new Producto_Model();
+          $productoModel = new producto_model();
           $data['eliminado'] = $productoModel->where('id', $id)->first();
           $data['eliminado'] = 'NO';
           $productoModel->update($id, $data);
@@ -172,16 +172,16 @@ class Productocontroller extends Controller
       { 
           
       $dato = array('titulo' => 'Ventas');
-     $producto = new Producto_Model();
+     $producto = new producto_model();
     
      $producto = $producto->findAll();
    $query=  $producto->join('productos', 'productos.categoria_id=categorias.id');
     $query   = $producto->get();
 
      // return json_encode($query->getResult());
-        // $productoModel = new Producto_Model();
+        // $productoModel = new producto_model();
          $ventas = new Ventas_cabecera_model();
-       $data = array('ventas_cabecera' => $this->Producto_Model->get_ventas_cabecera());
+       $data = array('ventas_cabecera' => $this->producto_model->get_ventas_cabecera());
 
           echo view('front/head_view_crud',$dato);
           echo view('front/nav_view');

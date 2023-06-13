@@ -37,15 +37,40 @@ $routes->get('/wip', 'Home::wip');
 $routes->get('/products', 'Home::products');
 $routes->get('/services', 'Home::services');
 
+/* registro */
 $routes->get('/register', 'Usuario_controller::create');
 $routes->post('/send-form', 'Usuario_controller::formValidation');
 
+/* login */
 $routes->get('/login', 'Login_controller');
 $routes->post('/send-login', 'Login_controller::auth');
 $routes->get('/panel', 'Panel_controller::index',['filter' => 'auth']);
 $routes->get('/logout', 'Login_controller::logout');
 
+/* prueba luego de logearse */
 $routes->get('/welcome', 'Home::welcome');
+
+/* productos */
+$routes->get('/crear', 'Productocontroller::index');
+$routes->get('/agregar', 'Productocontroller::index');
+$routes->get('/producto-form', 'Productocontroller::creaproducto');
+$routes->post('/post-producto', 'Productocontroller::store');
+$routes->get('/editar/(:num)', 'Productocontroller::singleproducto/$1');
+$routes->post('/modificar/(:num)', 'Productocontroller::modifica/$1');
+$routes->get('/eliminar/(:num)', 'Productocontroller::deleteproducto/$1');
+$routes->get('/eliminados', 'Productocontroller::eliminado');
+$routes->get('/activar/(:num)', 'Productocontroller::activarproducto/$1');
+
+/* carrito */
+$routes->get('/carrito', 'carrito_controller::index');
+$routes->get('/todos_p', 'Productocontroller::index');
+$routes->get('/producto-form', 'Productocontroller::creaproducto');
+$routes->post('/post-producto', 'Productocontroller::store');
+$routes->get('/editar/(:num)', 'Productocontroller::singleproducto/$1');
+$routes->get('/eliminar/(:num)', 'Productocontroller::deleteproducto/$1');
+$routes->get('/eliminados', 'Productocontroller::eliminado');
+$routes->get('/activar/(:num)', 'Productocontroller::activarproducto/$1');
+
 
 
 
