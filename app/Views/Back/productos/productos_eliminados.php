@@ -27,7 +27,7 @@
                 <!--estructura de repeticion para mostrar productos --->
                 <?php if($productos): ?>
                 <?php foreach($productos as $producto): ?>
-                <?php if($producto['eliminado'] === 'NO'): ?>
+                <?php if($producto['eliminado'] === 'SI'): ?>
                 <tr>
                     <td> <?php echo $producto['id'] ?> </td>
                     <td> <?php echo $producto['nombre_producto'] ?> </td>
@@ -42,7 +42,7 @@
                         <a href="<?php echo base_url('editar/'.$producto['id']);?>" class="btn btn-primary"
                             type="button">Editar</a>
                         <a href="<?php echo base_url('eliminar/'.$producto['id']);?>" class="btn btn-danger"
-                            type="button">Borrar</a>
+                            type="button">Borrar de la bd</a>
 
                     </td>
                 </tr>

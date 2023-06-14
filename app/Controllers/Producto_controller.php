@@ -18,7 +18,10 @@ class Producto_controller extends Controller
     public function index()
     {
         $productoModel = new producto_model();
+        $categoriaModel = new categoria_model();
+
         $data['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
+        $data['categorias'] = $categoriaModel->orderBy('id', 'DESC')->findAll();
       
         $dato['titulo']='Crud_productos'; 
           echo view('front/head_view', $dato);
@@ -103,14 +106,14 @@ class Producto_controller extends Controller
             throw new \CodeIgniter\Exceptions\PageNotFoundException('No se encuentra el producto seleccionado');
             }
          // instancio el modelo de categorias
-        $categoriasM = new categoria_model();
+        $categorias = new categoria_model();
         // traer todas las categorias desde la db
-        $data['categorias'] = $categoriasM->getCategorias();
+        $data['categorias'] = $categorias->getCategorias();
         
         $dato['titulo']='Crud_productos'; 
          echo view('front/head_view', $dato);
          echo view('front/nav_view');
-         echo view('back/productos/edit', $data);
+         echo view('back/productos/edit_producto', $data);
          echo view('front/footer_view');
     }
 
@@ -155,10 +158,10 @@ class Producto_controller extends Controller
       
           $productoModel = new producto_model();
           $data['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
-          $dato['titulo']='Crud_productos'; 
+          $dato['titulo']='Crud_productos_eliminados'; 
           echo view('front/head_view', $dato);
           echo view('front/nav_view');
-          echo view('back/productos/producto_eliminado', $data);
+          echo view('back/productos/productos_eliminados', $data);
           echo view('front/footer_view');
     }
 

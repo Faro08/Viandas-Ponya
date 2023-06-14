@@ -55,10 +55,10 @@ $routes->get('/crear', 'Producto_controller::index');
 $routes->get('/agregar', 'Producto_controller::index');
 $routes->get('/producto-form', 'Producto_controller::creaproducto');
 $routes->post('/post-producto', 'Producto_controller::store');
-$routes->get('/editar/(:num)', 'Producto_ontroller::singleproducto/$1');
+$routes->get('/editar/(:num)', 'Producto_controller::singleproducto/$1');
 $routes->post('/modificar/(:num)', 'Producto_controller::modifica/$1');
 $routes->get('/eliminar/(:num)', 'Producto_controller::deleteproducto/$1');
-$routes->get('/eliminados', 'Producto_controller::eliminado');
+$routes->get('/eliminados', 'Producto_controller::eliminados');
 $routes->get('/activar/(:num)', 'Producto_controller::activarproducto/$1');
 
 /* carrito */
