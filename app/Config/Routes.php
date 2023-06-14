@@ -51,15 +51,15 @@ $routes->get('/logout', 'Login_controller::logout');
 $routes->get('/welcome', 'Home::welcome');
 
 /* productos */
-$routes->get('/crear', 'Productocontroller::index');
-$routes->get('/agregar', 'Productocontroller::index');
-$routes->get('/producto-form', 'Productocontroller::creaproducto');
-$routes->post('/post-producto', 'Productocontroller::store');
-$routes->get('/editar/(:num)', 'Productocontroller::singleproducto/$1');
-$routes->post('/modificar/(:num)', 'Productocontroller::modifica/$1');
-$routes->get('/eliminar/(:num)', 'Productocontroller::deleteproducto/$1');
-$routes->get('/eliminados', 'Productocontroller::eliminado');
-$routes->get('/activar/(:num)', 'Productocontroller::activarproducto/$1');
+$routes->get('/crear', 'Producto_controller::index');
+$routes->get('/agregar', 'Producto_controller::index');
+$routes->get('/producto-form', 'Producto_controller::creaproducto');
+$routes->post('/post-producto', 'Producto_controller::store');
+$routes->get('/editar/(:num)', 'Producto_ontroller::singleproducto/$1');
+$routes->post('/modificar/(:num)', 'Producto_controller::modifica/$1');
+$routes->get('/eliminar/(:num)', 'Producto_controller::deleteproducto/$1');
+$routes->get('/eliminados', 'Producto_controller::eliminado');
+$routes->get('/activar/(:num)', 'Producto_controller::activarproducto/$1');
 
 /* carrito */
 $routes->get('/carrito', 'carrito_controller::index');
@@ -67,9 +67,6 @@ $routes->get('/todos_p', 'Productocontroller::index');
 $routes->get('/producto-form', 'Productocontroller::creaproducto');
 $routes->post('/post-producto', 'Productocontroller::store');
 $routes->get('/editar/(:num)', 'Productocontroller::singleproducto/$1');
-$routes->get('/eliminar/(:num)', 'Productocontroller::deleteproducto/$1');
-$routes->get('/eliminados', 'Productocontroller::eliminado');
-$routes->get('/activar/(:num)', 'Productocontroller::activarproducto/$1');
 
 
 

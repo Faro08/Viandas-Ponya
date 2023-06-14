@@ -12,11 +12,13 @@
         <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
         <?php $validation = \Config\Services::validation(); ?>
 
+
+
         <div class="container mt-1 mb-1 d-flex justify-content-center">
             <div class="card" style="width: 50%;">
                 <div class="card-header text-center">
                     <!-- titulo del formulario-->
-                    <h2>Nuevo Produto</h2>
+                    <h2>Nuevo Producto</h2>
                 </div>
                 <!-- envio de datos a la ruta /send-form -->
                 <form method="post" action="<?php echo base_url('/post-producto') ?>" enctype="multipart/form-data">
@@ -33,13 +35,16 @@
                             </div>
                             <?php } ?>
                         </div>
+
+                        <!-- Categorias -->
                         <div class="mb-3">
                             <label for="categoria" class="form-label"> Categoria</label>
-                            <select name="categoria" class="form-select" value="<?php echo set_value('categoria_id')?>">
-                                <option selected>Seleccionar categoria</option>
-                                <option value="1">Carne</option>
-                                <option value="2">Vegetariano</option>
-                                <option value="3">Saludable</option>
+                            <select name="categoria" class="form-control" id="categoria " value="">
+                                <option value="">Seleccionar categoria</option>
+                                <?php foreach ($categorias as $categoria) { ?>
+                                <option value="<?php echo $categoria['id']; ?>">
+                                    <?php echo $categoria['id'], ". ", $categoria['descripcion']; }?>
+                                </option>
                             </select>
                             <!-- Error -->
                             <?php if ($validation->getError('categoria')) { ?>
@@ -62,7 +67,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="precio_venta" class="form-label">Precio de venta</label>
-                            <input type="text" name="costo" value="<?php echo set_value('precio_venta')?>"
+                            <input type="text" name="precio_venta" value="<?php echo set_value('precio_venta')?>"
                                 class="form-control" placeholder="Precio de venta">
                             <!-- Error -->
                             <?php if ($validation->getError('precio_venta')) { ?>
@@ -92,6 +97,12 @@
                                 <?= $error = $validation->getError('stock_min'); ?>
                             </div>
                             <?php } ?>
+                        </div>
+
+                        <!-- Imagen -->
+                        <div class="form-group">
+                            <label for="imagen">Imagen</label>
+                            <input type="file" class="form-control-file" name="imagen">
                         </div>
 
                         <input type="submit" value="Enviar" class="btn btn-success">
