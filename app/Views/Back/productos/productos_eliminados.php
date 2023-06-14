@@ -5,8 +5,7 @@
     <div class="mt-3">
         <div class="container mt-5">
             <div class="d-flex justify-content-end">
-                <a href="<?php echo site_url('/producto-form') ?>" class="btn btn-success ">Agregar</a>
-                <a href="<?php echo site_url('/eliminados') ?>" class="btn btn-secondary">eliminados</a>
+                <a href="<?php echo site_url('/crear') ?>" class="btn btn-secondary">Activos</a>
             </div>
         </div>
         <table class="table table-bordered" id="">
@@ -41,8 +40,9 @@
                         <!-- borrar/editar --->
                         <a href="<?php echo base_url('editar/'.$producto['id']);?>" class="btn btn-primary"
                             type="button">Editar</a>
-                        <a href="<?php echo base_url('eliminar/'.$producto['id']);?>" class="btn btn-danger"
-                            type="button">Borrar de la bd</a>
+                        <a href="<?php echo base_url('activar/'.$producto['id']);?>" class="btn btn-success"
+                            type="button">Activar</a>
+
 
                     </td>
                 </tr>

@@ -19,7 +19,8 @@
                     <h2>Nuevo Producto</h2>
                 </div>
                 <!-- envio de datos a la ruta /send-form -->
-                <form method="post" action="<?php echo base_url('/') ?>" enctype="multipart/form-data">
+                <form method="post" action="<?php echo base_url('modificar/'.$producto['id']);?>"
+                    enctype="multipart/form-data">
                     <div class="card-body" media="(max-width:768px)">
                         <div class="mb-2">
                             <label for="nombre" class="form-label">Nombre</label>
@@ -103,6 +104,7 @@
                         <!-- Imagen -->
                         <div class="form-group">
                             <label for="imagen">Imagen</label>
+                            <img src="<?=base_url()?>/assets/uploads/<?=$old['imagen']?>" height="100px" alt="">
                             <input type="file" class="form-control-file" name="imagen">
                         </div>
 

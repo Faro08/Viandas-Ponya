@@ -5,8 +5,8 @@
     <div class="mt-3">
         <div class="container mt-5">
             <div class="d-flex justify-content-end">
-                <a href="<?php echo site_url('/producto-form') ?>" class="btn btn-success ">Agregar</a>
-                <a href="<?php echo site_url('/eliminados') ?>" class="btn btn-secondary">eliminados</a>
+                <a href="<?php echo site_url('/producto-form') ?>" class="btn btn-success ">Agregar Producto</a>
+                <a href="<?php echo site_url('/eliminados') ?>" class="btn btn-secondary">Eliminados</a>
             </div>
         </div>
         <table class="table table-bordered" id="">

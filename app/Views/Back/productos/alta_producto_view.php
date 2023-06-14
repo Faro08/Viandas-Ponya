@@ -79,7 +79,7 @@
                         <div class="mb-3">
                             <label for="stock" class="form-label">Stock</label>
                             <input type="text" name="stock" value="<?php echo set_value('stock')?>" class="form-control"
-                                placeholder="stock">
+                                placeholder="Stock">
                             <!-- Error -->
                             <?php if ($validation->getError('stock')) { ?>
                             <div class='alert alert-danger mt-2'>
