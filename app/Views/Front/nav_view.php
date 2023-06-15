@@ -30,13 +30,13 @@
                             <a class="nav-link" href="<?php echo base_url('crear');?>">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('commerce');?>">Usuarios</a>
+                            <a class="nav-link" href="<?php echo base_url('crud-usuarios');?>">Usuarios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('contact');?>">Ventas</a>
+                            <a class="nav-link" href="<?php echo base_url('wip');?>">Ventas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('contact');?>">Consultas</a>
+                            <a class="nav-link" href="<?php echo base_url('wip');?>">Consultas</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -72,18 +72,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('');?>">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Plato del dia
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?php echo base_url('products');?>">Carne</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Vegetariano</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Saludable</a></li>
-
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo base_url('catalogo-productos');?>">Platos</a>
                         </li>
+
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -148,17 +140,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('');?>">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Plato del dia
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?php echo base_url('products');?>">Carne</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Vegetariano</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Saludable</a></li>
 
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo base_url('catalogo-productos');?>">Platos</a>
                         </li>
 
                         <li class="nav-item dropdown">

@@ -50,6 +50,9 @@ $routes->get('/logout', 'Login_controller::logout');
 /* prueba luego de logearse */
 $routes->get('/welcome', 'Home::welcome');
 
+/* catalogo de productos */
+$routes->get('/catalogo-productos', 'Catalogo_controller::index');
+
 /* productos */
 $routes->get('/crear', 'Producto_controller::index');
 $routes->get('/agregar', 'Producto_controller::index');
@@ -60,6 +63,11 @@ $routes->post('/modificar/(:num)', 'Producto_controller::modifica/$1');
 $routes->get('/eliminar/(:num)', 'Producto_controller::deleteproducto/$1');
 $routes->get('/eliminados', 'Producto_controller::eliminados');
 $routes->get('/activar/(:num)', 'Producto_controller::activarproducto/$1');
+
+/* users */
+$routes->get('/crud-usuarios', 'Usuario_crud_controller::index');
+$routes->get('/editar-usuario/(:num)', 'Usuario_crud_controller::singleUser/$1');
+$routes->get('/eliminar-usuario/(:num)', 'Usuario_crud_controller::deletelogico/$1');
 
 /* carrito */
 $routes->get('/carrito', 'carrito_controller::index');

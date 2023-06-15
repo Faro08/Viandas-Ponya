@@ -143,6 +143,7 @@ class Producto_controller extends Controller
         $productoModel->update($id, $data);
         return $this->response->redirect(site_url('crear'));
     } 
+    
     //eliminar lógicamente 
       public function deleteproducto($id)
         {

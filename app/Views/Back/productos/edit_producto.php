@@ -19,7 +19,7 @@
                     <h2>Nuevo Producto</h2>
                 </div>
                 <!-- envio de datos a la ruta /send-form -->
-                <form method="post" action="<?php echo base_url('modificar/'.$producto['id']);?>"
+                <form method="post" action="<?php echo base_url('modificar/'.$old['id']);?>"
                     enctype="multipart/form-data">
                     <div class="card-body" media="(max-width:768px)">
                         <div class="mb-2">
@@ -109,6 +109,7 @@
                         </div>
 
                         <input type="submit" value="Enviar" class="btn btn-success">
+                        <a class="btn btn-danger" href="<?php echo base_url('crear');?>">Cancelar</a>
                     </div>
                 </form>
             </div>

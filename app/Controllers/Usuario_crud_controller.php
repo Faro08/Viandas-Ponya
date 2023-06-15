@@ -9,13 +9,13 @@ class Usuario_crud_controller extends Controller
     // show users list
     public function index(){
         $userModel = new Usuarios_Model();
-        $data['users'] = $userModel->orderBy('id_usuario', 'DESC')->findAll();
+        $data['usuarios'] = $userModel->orderBy('id', 'DESC')->findAll();
        
          $dato['titulo']='Crud_usuarios'; 
          
-         echo view('front/head_view_crud', $dato);
+         echo view('front/head_view', $dato);
          echo view('front/nav_view');
-         echo view('back/usuario/usuario_nuevo_view',$data);
+         echo view('back/usuario/crud_usuarios_view',$data);
          echo view('front/footer_view');
     }
     // add user form
