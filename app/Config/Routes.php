@@ -54,7 +54,7 @@ $routes->get('/welcome', 'Home::welcome');
 $routes->get('/catalogo-productos', 'Catalogo_controller::index');
 
 /* productos */
-$routes->get('/crear', 'Producto_controller::index');
+$routes->get('/crear', 'Producto_controller::index',['filter' => 'auth']);
 $routes->get('/agregar', 'Producto_controller::index');
 $routes->get('/producto-form', 'Producto_controller::creaproducto');
 $routes->post('/post-producto', 'Producto_controller::store');

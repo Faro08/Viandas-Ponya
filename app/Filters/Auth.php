@@ -6,14 +6,14 @@ use CodeIgniter\Filters\FilterInterface;
 class Auth implements FilterInterface{
     public function before(RequestInterface $request, $arguments = null){
         //si no esta logeado
-        if(!session()->get('logged_in')){
-            return redirect()->to('welcome');
+        if(!session()->get('loged_in')){
+            return redirect()->to('login');
             
         }
     }
 
     public function after(RequestInterface $request,
     ResponseInterface $response, $arguments = null){
-        console.log("aaaa");
+        //
     }
 }
