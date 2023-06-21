@@ -30,6 +30,7 @@ class Producto_controller extends Controller
           echo view('front/footer_view');
     }
    
+    /* formulario creacion de producto */
     public function creaproducto(){
    
       $categoriasmodel = new categoria_model();
@@ -46,22 +47,60 @@ class Producto_controller extends Controller
       echo view('front/footer_view');
     }
     
+    /* post producto */
     public function store() {
+      $producto = new producto_model();
       $categoriasmodel = new categoria_model();
+
       $data['categorias'] = $categoriasmodel->getCategorias();
 
+      /* validacion inputs */
        $input = $this->validate([
                         
-            'nombre_producto' =>'required|min_length[2]',
+            'nombre' =>'required|min_length[2]',
             'categoria'=>'is_not_unique[categorias.id]',
             'costo'  => 'required',
             'precio_venta'  => 'required',
             'stock'  => 'required',
-            'stock_min' => 'required'
+            'stock_min' => 'required',
+            'imagen' => [
+              'uploaded[imagen]',
+              'mime_in[imagen,image/jpg,image/jpeg,image/png]',
+              /* 'max_size[imagen,1024]', */
+            ]
           ]);
         
-        $productoModel = new producto_model();
- 
+        if(!$input){
+          $session = session();
+          $session->setFlashdata('mensaje', 'Error de ingreso');
+
+          return redirect()->back()->withInput();
+
+          /* $dato['titulo']='Alta'; 
+          echo view('front/head_view',$dato);
+          echo view('front/nav_view');
+          echo view('back/productos/alta_producto_view',$data , [
+          'validation' => $this->validator
+          ]); */
+     
+        }else{
+          $imagen=$this->request->getFile('imagen');
+          $nombre_aleatorio = $imagen->getRandomName();
+            $imagen->move(ROOTPATH.'assets/uploads', $nombre_aleatorio);
+            $data = [
+              'nombre_producto' => $this->request->getVar('nombre'),
+               'categoria_id' => $this->request->getVar('categoria'),
+               'costo' => $this->request->getVar('costo'),
+               'precio_venta' => $this->request->getVar('precio_venta'),
+               'stock' => $this->request->getVar('stock'),
+               'stock_min' => $this->request->getVar('stock_min'),
+               'imagen' => $imagen->getName(),
+            ];
+            
+            $producto->insert($data);
+          return $this->response->redirect(site_url('crear'));
+        }
+
         /* if (!$input) {
                $dato['titulo']='Alta'; 
                 echo view('front/head_view',$dato);
@@ -71,29 +110,38 @@ class Producto_controller extends Controller
             ]);
         } else { */
           
-              $img = $this->request->getFile('imagen');
+              /* $img = $this->request->getFile('imagen');
               $nombre_aleatorio = $img->getRandomName();
               $img->move(ROOTPATH.'assets/uploads', $nombre_aleatorio);
 
               $data = [
                    'nombre_producto' => $this->request->getVar('nombre'),
                    'imagen' => $img->getName(),
-                    // completar con los demas campos
+                    
                     'categoria_id' => $this->request->getVar('categoria'),
                     'costo' => $this->request->getVar('costo'),
                     'precio_venta' => $this->request->getVar('precio_venta'),
                     'stock' => $this->request->getVar('stock'),
                     'stock_min' => $this->request->getVar('stock_min'),
-                     //'eliminado' => NO
+                    
             ];
            
               $producto = new producto_model();
               $producto->insert($data);
              
-              return $this->response->redirect(site_url('crear'));
+              return $this->response->redirect(site_url('crear')); */
 
         /* } */
+
     }
+
+      
+
+      
+        
+ 
+        
+    
         
     // show single producto
     public function singleproducto($id = null){
@@ -119,28 +167,61 @@ class Producto_controller extends Controller
 
         // update de productos (modificacion)
     public function modifica($id){
-        $productoModel = new producto_model();
-        $id = $productoModel->where('id', $id)->first();
+        $producto= new producto_model();
+        /* $id = $productoModel->where('id', $id)->first(); */
 
-         $img = $this->request->getFile('imagen');
+         /* $img = $this->request->getFile('imagen');
          $nombre_aleatorio = $img->getRandomName();
-         $img->move(ROOTPATH.'assets/uploads',$nombre_aleatorio);
+         $img->move(ROOTPATH.'assets/uploads',$nombre_aleatorio); */
 
          //$productoModel->update($id, ['imagen' => $nombre_aleatorio)]);
 
-         $data = [
-                   'nombre_producto' => $this->request->getVar('nombre_producto'),
-                    'imagen' => $img->getName(),
-                    // completar con los demas campos
-                    'categoria_id' => $this->request->getVar('categoria'),
-                    'costo' => $this->request->getVar('costo'),
-                    'precio_venta' => $this->request->getVar('precio_venta'),
-                    'stock' => $this->request->getVar('stock'),
-                    'stock_min' => $this->request->getVar('stock_min'),
-                   // 'eliminado' => 'NO',
+        $validacionImg = $this->validate([
+          'imagen' => [
+            'uploaded[imagen]',
+            'mime_in[imagen,image/jpg,image/jpeg,image/png]',
+            /* 'max_size[imagen,1024]', */
+          ]
+        ]);
+        if($validacionImg){
+          if($imagen=$this->request->getFile('imagen')){
+
+            $datosProducto = $producto->where('id', $id)->first();
+            $ruta=(ROOTPATH.'assets\uploads\\'.$datosProducto['imagen']);
+            unlink($ruta);
+
+            $nombre_aleatorio = $imagen->getRandomName();
+            $imagen->move(ROOTPATH.'assets/uploads', $nombre_aleatorio);
+
+            $data = [
+              'nombre_producto' => $this->request->getVar('nombre'),
+              'imagen' => $imagen->getName(),
+               
+               'categoria_id' => $this->request->getVar('categoria'),
+               'costo' => $this->request->getVar('costo'),
+               'precio_venta' => $this->request->getVar('precio_venta'),
+               'stock' => $this->request->getVar('stock'),
+               'stock_min' => $this->request->getVar('stock_min'),
+               
             ];
-        
-        $productoModel->update($id, $data);
+            
+            $producto->update($id, $data);
+    
+          }
+    
+        }else{
+          $data = [
+            'nombre_producto' => $this->request->getVar('nombre'),
+            'categoria_id' => $this->request->getVar('categoria'),
+            'costo' => $this->request->getVar('costo'),
+            'precio_venta' => $this->request->getVar('precio_venta'),
+            'stock' => $this->request->getVar('stock'),
+            'stock_min' => $this->request->getVar('stock_min'),
+          ];
+          
+          $producto->update($id, $data);
+        }
+
         return $this->response->redirect(site_url('crear'));
     } 
     

@@ -1,10 +1,11 @@
-<div class="container">
-    <div class="row mt-4 productos-destacados">
-        <div class="col">
-            <h2>Platos</h2>
-            <hr><br>
-            <div class="row">
-                <?php
+<main class="bg-opnya">
+    <div class="container">
+        <div class="row mt-4 productos-destacados">
+            <div class="col">
+                <h2>Platos</h2>
+                <hr><br>
+                <div class="row">
+                    <?php
                 // Obtener una instancia del modelo de productos
                 $productosModel = new \App\Models\Producto_model();
 
@@ -37,35 +38,36 @@
                     }
                 }
                 ?>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Detalles del producto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-6">
-                        <img id="producto-imagen" src="" alt="Imagen del producto" width="95" height="84">
-                    </div>
-                    <div class="col-6">
-                        <h4 id="producto-nombre"></h4>
-                        <p id="producto-descripcion"></p>
-                        <p id="producto-stock"></p>
-                    </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Comprar ahora</button>
-                <button type="button" class="btn btn-primary">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detalles del producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <img id="producto-imagen" src="" alt="Imagen del producto" width="95" height="84">
+                        </div>
+                        <div class="col-6">
+                            <h4 id="producto-nombre"></h4>
+                            <p id="producto-descripcion"></p>
+                            <p id="producto-stock"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Comprar ahora</button>
+                    <button type="button" class="btn btn-primary">Agregar al carrito</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</main>

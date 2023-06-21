@@ -1,18 +1,18 @@
 <main>
     <div class="container text-center mt-5">
         <div>
-            <!--recuperamos datos con la función Flashdata para mostrarlos-->
-            <?php if (session()->getFlashdata('success')) {
-      echo "
-      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
-      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>" . session()->getFlashdata('success') . "
-  </div>";
-    } ?>
+
+            <?php if (session('mensaje')) {?>
+
+            <div class='alert alert-danger' role="alert">
+                <?php echo session('mensaje');?>
+            </div>
+
+
+            <?php } ?>
         </div>
         <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
         <?php $validation = \Config\Services::validation(); ?>
-
-
 
         <div class="container mt-1 mb-1 d-flex justify-content-center">
             <div class="card" style="width: 50%;">
@@ -27,7 +27,7 @@
                             <label for="nombre" class="form-label">Nombre</label>
                             <!-- ingreso del nombre-->
                             <input name="nombre" type="text" class="form-control"
-                                value="<?php echo set_value('nombre_producto')?>" placeholder="Nombre">
+                                value="<?php echo set_value('nombre')?>" placeholder="Nombre">
                             <!-- Error -->
                             <?php if ($validation->getError('nombre')) { ?>
                             <div class='alert alert-danger mt-2'>
@@ -39,10 +39,14 @@
                         <!-- Categorias -->
                         <div class="mb-3">
                             <label for="categoria" class="form-label"> Categoria</label>
-                            <select name="categoria" class="form-control" id="categoria " value="">
+                            <select name="categoria" class="form-control" id="categoria "
+                                value="<?php echo set_value('categoria_id') ?>">
                                 <option value="">Seleccionar categoria</option>
                                 <?php foreach ($categorias as $categoria) { ?>
-                                <option value="<?php echo $categoria['id']; ?>">
+                                <option value="<?php echo $categoria['id']; ?>"
+                                    <?php if(echo value('categoria_id') === $categoria['id']): ?> selected="selected">
+                                    <?php else : ?> >
+                                    <?php endif; ?>
                                     <?php echo $categoria['id'], ". ", $categoria['descripcion']; }?>
                                 </option>
                             </select>
@@ -106,7 +110,7 @@
                         </div>
 
                         <input type="submit" value="Enviar" class="btn btn-success">
-                        <input type="reset" value="Limpiar" class="btn btn-danger">
+                        <a class="btn btn-danger" href="<?php echo base_url('crear');?>">Cancelar</a>
                     </div>
                 </form>
             </div>

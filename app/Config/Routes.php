@@ -47,7 +47,7 @@ $routes->post('/send-login', 'Login_controller::auth');
 $routes->get('/panel', 'Panel_controller::index',['filter' => 'auth']);
 $routes->get('/logout', 'Login_controller::logout');
 
-/* prueba luego de logearse */
+/* test luego de logearse */
 $routes->get('/welcome', 'Home::welcome');
 
 /* catalogo de productos */
@@ -55,7 +55,6 @@ $routes->get('/catalogo-productos', 'Catalogo_controller::index');
 
 /* productos */
 $routes->get('/crear', 'Producto_controller::index',['filter' => 'auth']);
-$routes->get('/agregar', 'Producto_controller::index');
 $routes->get('/producto-form', 'Producto_controller::creaproducto');
 $routes->post('/post-producto', 'Producto_controller::store');
 $routes->get('/editar/(:num)', 'Producto_controller::singleproducto/$1');
@@ -65,7 +64,7 @@ $routes->get('/eliminados', 'Producto_controller::eliminados');
 $routes->get('/activar/(:num)', 'Producto_controller::activarproducto/$1');
 
 /* users */
-$routes->get('/crud-usuarios', 'Usuario_crud_controller::index');
+$routes->get('/crud-usuarios', 'Usuario_crud_controller::index',['filter' => 'auth']);
 $routes->get('/editar-usuario/(:num)', 'Usuario_crud_controller::singleUser/$1');
 $routes->get('/eliminar-usuario/(:num)', 'Usuario_crud_controller::deletelogico/$1');
 

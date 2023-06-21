@@ -9,16 +9,16 @@
   </div>";
     } ?>
         </div>
-        <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
+
         <?php $validation = \Config\Services::validation(); ?>
 
         <div class="container mt-1 mb-1 d-flex justify-content-center">
             <div class="card" style="width: 50%;">
                 <div class="card-header text-center">
                     <!-- titulo del formulario-->
-                    <h2>Nuevo Producto</h2>
+                    <h2>Editar Producto</h2>
                 </div>
-                <!-- envio de datos a la ruta /send-form -->
+                <!-- envio de datos a la ruta /modificar -->
                 <form method="post" action="<?php echo base_url('modificar/'.$old['id']);?>"
                     enctype="multipart/form-data">
                     <div class="card-body" media="(max-width:768px)">
@@ -44,6 +44,7 @@
                                 <?php foreach ($categorias as $categoria) { ?>
                                 <option value="<?php echo $categoria['id']; ?>"
                                     <?php if($old['categoria_id'] === $categoria['id']): ?> selected="selected">
+                                    <?php else : ?> >
                                     <?php endif; ?>
                                     <?php echo $categoria['id'], ". ", $categoria['descripcion']; }?>
                                 </option>
@@ -102,8 +103,8 @@
                         </div>
 
                         <!-- Imagen -->
-                        <div class="form-group">
-                            <label for="imagen">Imagen</label>
+                        <div class="mb-3">
+                            <label for="imagen" class="form-label">Imagen actual</label>
                             <img src="<?=base_url()?>/assets/uploads/<?=$old['imagen']?>" height="100px" alt="">
                             <input type="file" class="form-control-file" name="imagen">
                         </div>
