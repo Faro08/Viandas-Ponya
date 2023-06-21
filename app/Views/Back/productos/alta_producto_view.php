@@ -44,7 +44,7 @@
                                 <option value="">Seleccionar categoria</option>
                                 <?php foreach ($categorias as $categoria) { ?>
                                 <option value="<?php echo $categoria['id']; ?>"
-                                    <?php if(echo value('categoria_id') === $categoria['id']): ?> selected="selected">
+                                    <?php if( old('categoria_id') === $categoria['id']): ?> selected="selected">
                                     <?php else : ?> >
                                     <?php endif; ?>
                                     <?php echo $categoria['id'], ". ", $categoria['descripcion']; }?>

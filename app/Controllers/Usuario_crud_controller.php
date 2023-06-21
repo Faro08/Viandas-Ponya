@@ -1,47 +1,62 @@
 <?php 
 namespace App\Controllers;
-use App\Models\Usuarios_Model;
+use App\Models\usuarios_Model;
 use App\Models\consulta_Model;
+Use App\Models\perfil_model;
 use CodeIgniter\Controller;
 
 class Usuario_crud_controller extends Controller
 {
+    public function __construct(){
+        helper(['url', 'form']);
+        //$db = \Config\Database::connect();
+                     
+      }
+
     // show users list
     public function index(){
         $userModel = new Usuarios_Model();
         $data['usuarios'] = $userModel->orderBy('id', 'DESC')->findAll();
        
          $dato['titulo']='Crud_usuarios'; 
-         
          echo view('front/head_view', $dato);
          echo view('front/nav_view');
          echo view('back/usuario/crud_usuarios_view',$data);
          echo view('front/footer_view');
     }
-    // add user form
+    // form creacion usuario
     public function create(){
-        $userModel = new Usuarios_Model();
-        $data['user_obj'] = $userModel->orderBy('id_usuario', 'DESC')->findAll();
+        $perfilModel = new perfil_model();
+        //traer perfiles de la bd
+        $data['perfiles'] = $perfilModel->getPerfiles();
+        $userModel = new usuarios_model();
+        $data['user_obj'] = $userModel->orderBy('id', 'DESC')->findAll();
       
          $dato['titulo']='Alta Usuario'; 
-        echo view('front/head_view_crud',$dato);
+        echo view('front/head_view',$dato);
         echo view('front/nav_view');
-         echo view('back/usuario/usuario_crud_view',$data);
+         echo view('back/usuario/alta_usuario_view',$data);
           echo view('front/footer_view');
     }
  
     // insert data
     public function store() {
-        //$userModel = new Usuarios_Model();
+        
+        $userModel = new usuarios_model();
+        $perfilesModel = new perfil_model();
+        $data['perfiles'] = $perfilesmodel->getPerfiles();
 
+        /* validacion inputs */
         $input = $this->validate([
+            'perfil'=>'is_not_unique[perfiles.id]',
             'nombre'   => 'required|min_length[3]',
-            'apellido' => 'required|min_length[3]|max_length[25]',
+            'apellido' => 'required|min_length[3]',
+            'direccion' => 'required|min_length[3]',
             'email'    => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuarios.email]',
             'usuario'  => 'required|min_length[3]',
             'pass'     => 'required|min_length[3]|max_length[10]'
         ]);
-        $userModel = new Usuarios_model();
+        
  
         if (!$input) {
                $data['titulo']='Modificacion'; 
@@ -62,7 +77,7 @@ class Usuario_crud_controller extends Controller
               //  'pass'  => $this->request->getVar('pass'),
             ];  
              $userModel->insert($data);
-             return $this->response->redirect(site_url('users-list'));
+             return $this->response->redirect(site_url('create'));
         }
     
    }

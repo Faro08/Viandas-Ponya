@@ -65,6 +65,8 @@ $routes->get('/activar/(:num)', 'Producto_controller::activarproducto/$1');
 
 /* users */
 $routes->get('/crud-usuarios', 'Usuario_crud_controller::index',['filter' => 'auth']);
+$routes->get('/crear-usuario', 'Usuario_crud_controller::create');
+$routes->post('/post-usuario', 'Usuario_crud_controller::store');
 $routes->get('/editar-usuario/(:num)', 'Usuario_crud_controller::singleUser/$1');
 $routes->get('/eliminar-usuario/(:num)', 'Usuario_crud_controller::deletelogico/$1');
 
