@@ -240,7 +240,7 @@ class Producto_controller extends Controller
       
           $productoModel = new producto_model();
           $data['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
-          $dato['titulo']='Crud_productos_eliminados'; 
+          $dato['titulo']='Productos eliminados'; 
           echo view('front/head_view', $dato);
           echo view('front/nav_view');
           echo view('back/productos/productos_eliminados', $data);

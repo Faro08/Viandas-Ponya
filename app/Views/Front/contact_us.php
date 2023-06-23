@@ -1,29 +1,43 @@
 <main class="bg-ponya ">
     <div class="container text-center container-about">
         <h1 class="mt-5 font-handlee separador-titulo-200">CONTACTO</h1>
+        <div>
+            <!--recuperamos datos con la función Flashdata para mostrarlos-->
+            <?php if (session()->getFlashdata('success')) {
+      echo "
+      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>" . session()->getFlashdata('success') . "
+  </div>";
+    } ?>
+        </div>
+        <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
+        <?php $validation = \Config\Services::validation(); ?>
         <div class="mt-5 row gx-5">
             <div class="col-lg-7 px-5">
                 <h3 class="font-handlee" style="text-align: justify">Podes contactarnos con el siguiente formulario y
                     nos pondremos
                     en contacto a la brevedad</h3>
-                <form class="pt-3">
+                <!-- FORMULARIO DE CONSULTA -->
+                <form class="pt-3" method="post" action="<?php echo base_url('/send-consulta') ?>">
                     <div class="row">
                         <div class="col">
                             <label for="exampleInputEmail1" class="form-label font-handlee">Nombre</label>
-                            <input class="form-control" required>
+                            <input name="nombre" type="text" class="form-control" required>
                         </div>
                         <div class="col">
                             <label for="exampleFormControlInput1" class="form-label font-handlee">Email</label>
-                            <input type="email" class="form-control" placeholder="nombre@ejemplo.com" required>
+                            <input name="email" type="email" class="form-control" placeholder="nombre@ejemplo.com"
+                                required>
                         </div>
                     </div>
 
                     <div class="mt-3 mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label font-handlee">Mensaje</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" required></textarea>
+                        <textarea name="mensaje" class="form-control" id="exampleFormControlTextarea1" rows="8"
+                            required></textarea>
                     </div>
-                    <button class="btn btn-lg button-ordenarOnline font-handlee mb-5"
-                        style="width:200px;">Enviar</button>
+                    <input type="submit" value="Enviar" class="btn btn-lg button-ordenarOnline font-handlee mb-5"
+                        style="width:200px;">
                     <button class="btn btn-lg button-ordenarOnline font-handlee mb-5" style="width:200px;"
                         type="reset">Limpiar</button>
                 </form>

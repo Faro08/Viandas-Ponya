@@ -15,9 +15,11 @@ class Usuario_crud_controller extends Controller
 
     // show users list
     public function index(){
-        $userModel = new Usuarios_Model();
+        $userModel = new usuarios_model();
+        $perfilModel = new perfil_model();
         $data['usuarios'] = $userModel->orderBy('id', 'DESC')->findAll();
-       
+        $data['perfiles'] = $perfilModel->orderBy('id', 'DESC')->findAll();
+
          $dato['titulo']='Crud_usuarios'; 
          echo view('front/head_view', $dato);
          echo view('front/nav_view');
@@ -44,7 +46,7 @@ class Usuario_crud_controller extends Controller
         
         $userModel = new usuarios_model();
         $perfilesModel = new perfil_model();
-        $data['perfiles'] = $perfilesmodel->getPerfiles();
+        $data['perfiles'] = $perfilesModel->getPerfiles();
 
         /* validacion inputs */
         $input = $this->validate([
@@ -68,8 +70,10 @@ class Usuario_crud_controller extends Controller
         } else {
            
         $data = [
+                'perfil_id' => $this->request->getVar('perfil'),
                 'nombre' => $this->request->getVar('nombre'),
                 'apellido' => $this->request->getVar('apellido'),
+                'direccion' => $this->request->getVar('direccion'),
                 'usuario' => $this->request->getVar('usuario'),
                 'email'  => $this->request->getVar('email'),
                 'pass' => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT),
@@ -77,64 +81,87 @@ class Usuario_crud_controller extends Controller
               //  'pass'  => $this->request->getVar('pass'),
             ];  
              $userModel->insert($data);
-             return $this->response->redirect(site_url('create'));
+             return $this->response->redirect(site_url('crud-usuarios'));
         }
     
    }
     // show single user
     public function singleUser($id = null){
          $userModel = new Usuarios_Model();
-         $data['user_obj'] = $userModel->where('id_usuario', $id)->first();
-        
-        $dato['titulo']='Crud_usuarios'; 
-         echo view('front/head_view_crud', $dato);
+         $data['user_obj'] = $userModel->where('id', $id)->first();
+         $perfilModel = new perfil_model();
+         $data['perfiles'] = $perfilModel->getPerfiles();
+        $dato['titulo']='Modificar Usuario'; 
+         echo view('front/head_view', $dato);
          echo view('front/nav_view');
-         echo view('back/usuario/edit_usuarios_view', $data);
+         echo view('back/usuario/edit_usuario', $data);
          echo view('front/footer_view');
     }
     // update user data
     public function update(){
         $userModel = new Usuarios_Model();
-        $id = $this->request->getVar('id_usuario');
+        $id = $this->request->getVar('id');
         $data = [
             'nombre' => $this->request->getVar('nombre'),
             'apellido' => $this->request->getVar('apellido'),
             'usuario' => $this->request->getVar('usuario'),
             'email'  => $this->request->getVar('email'),
+            'direccion'  => $this->request->getVar('direccion'),
             'pass' => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT),
-            'perfil_id' => $this->request->getVar('perfil_id'),
-            'baja'=> $this->request->getVar('baja'),
         ];
         $userModel->update($id, $data);
-        return $this->response->redirect(site_url('users-list'));
+        return $this->response->redirect(site_url('crud-usuarios'));
     }
  
     // delete user
     public function delete($id = null){
         $userModel = new Usuarios_Model();
-        $data['usuario'] = $userModel->where('id_usuario', $id)->delete($id);
-        return $this->response->redirect(site_url('users-list'));
+        $data['usuario'] = $userModel->where('id', $id)->delete($id);
+        return $this->response->redirect(site_url('crud-usuarios'));
     } 
     //delete lógico (cambia el estado del campo baja)   
     public function deletelogico($id = null)
     {
         $userModel = new Usuarios_Model();
-        $data['baja'] = $userModel->where('id_usuario', $id)->first();
+        $data['baja'] = $userModel->where('id', $id)->first();
         $data['baja'] = 'SI';
          $userModel->update($id, $data);
-        return $this->response->redirect(site_url('users-list'));
+        return $this->response->redirect(site_url('crud-usuarios'));
     }    
+
+    public function eliminados()
+      {
+          $usuarioModel = new usuarios_model();
+          $data['usuarios'] = $usuarioModel->orderBy('id', 'DESC')->findAll();
+          $dato['titulo']='Usuarios eliminados';
+          echo view('front/head_view', $dato);
+          echo view('front/nav_view');
+          echo view('back/usuario/usuarios_baja', $data);
+          echo view('front/footer_view');
+    }
+
+     public function activarusuario($id)
+        {
+          $usuarioModel = new usuarios_model();
+          $data['baja'] = $usuarioModel->where('id', $id)->first();
+          $data['baja'] = 'NO';
+          $usuarioModel->update($id, $data);
+         return $this->response->redirect(site_url('crud-usuarios'));
+      }
+
+
+    /* CONSULTAS */
 
     public function listar_consultas(){
         // instancio el modelo de consultas
-        $consultas = new consulta_Model();
+        $consultas = new consulta_model();
         // traer todos los consultas activas desde la db
         $data['consultas'] = $consultas->getConsultas();
-            $dato['titulo']='Gestion-Consultas'; 
+        $dato['titulo']='Consultas'; 
     
-        echo view('front/head_view_crud', $dato);
+        echo view('front/head_view', $dato);
          echo view('front/nav_view');
-         echo view('back/consultas/listar_consultas', $data);
+         echo view('back/consultas/consultas_view', $data);
          echo view('front/footer_view');
 
             }
@@ -145,7 +172,7 @@ class Usuario_crud_controller extends Controller
         // traigo consulta por id
         $consultasM->getConsulta($id);
         // actualizo el estado de la consulta
-        $consultasM->update($id, ['respuesta' => 'SI']);
+        $consultasM->update($id, ['leida' => 'SI']);
         // redirecciona al metodo de el controllador
         return redirect()->to(base_url('listar_consultas'));
     }

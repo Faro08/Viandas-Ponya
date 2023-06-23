@@ -2,12 +2,12 @@
     <div class="container text-center mt-5">
         <div>
             <!--recuperamos datos con la función Flashdata para mostrarlos-->
-            <?php if (session()->getFlashdata('success')) {
-      echo "
-      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
-      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>" . session()->getFlashdata('success') . "
-  </div>";
-    } ?>
+            <?php if(session()->getFlashdata('msg')):?>
+            <div class="alert alert-warning">
+
+                <?= session()->getFlashdata('msg')?>
+            </div>
+            <?php endif;?>
         </div>
         <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
         <?php $validation = \Config\Services::validation(); ?>
@@ -47,9 +47,12 @@
                             <?php } ?>
                         </div>
                         <input type="submit" value="Ingresar" class="btn btn-success">
-                        <input type="reset" value="Cancelar" class="btn btn-danger">
+                        <input type="reset" value="Limpiar" class="btn btn-danger">
                     </div>
                 </form>
+                <p class="m-0">No estas registrado ? <a class="color-3" style="text-decoration: none;"
+                        href="<?php echo base_url('register');?>"><b>Crear cuenta</b></a>
             </div>
+
         </div>
 </main>

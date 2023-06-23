@@ -15,7 +15,7 @@
                             src="assets/bootstrap-icons-1.10.4/hand-index-thumb.svg" alt="icono localizacion" width="20"
                             height="20">
                         <p class="m-0">Elegí el <a class="color-4" style="text-decoration: none;"
-                                href="<?php echo base_url('wip');?>"><b>plato
+                                href="<?php echo base_url('catalogo-productos');?>"><b>plato
                                     del
                                     día</b></a> y porciones que desees, o
                             suscribite a nuestro <a class="color-4" style="text-decoration: none;"
@@ -84,7 +84,7 @@
 
             <div class="d-grid gap-2 col-6 mx-auto mt-2 mb-5">
                 <a class="btn btn-lg button-ordenarOnline font-handlee" type="button"
-                    href="<?php echo base_url('wip');?>">ORDENAR ONLINE! ></a>
+                    href="<?php echo base_url('catalogo-productos');?>">ORDENAR ONLINE! ></a>
             </div>
         </div>
 

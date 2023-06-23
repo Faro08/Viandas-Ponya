@@ -19,7 +19,7 @@ class producto_model extends Model
 
     public function getProducto($id =null){
         $builder = $this->getBuilderProductos();
-        $builder-where('productos.id', $id);
+        $builder->where('productos.id', $id);
         $query = $builder->get();
         return $query->getRowArray();
     }

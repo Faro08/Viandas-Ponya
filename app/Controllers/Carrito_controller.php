@@ -18,20 +18,7 @@ class carrito_controller extends BaseController{
        $cart = \Config\Services::cart();
        $cart->contents();
     }      
-	public function catalogo(){
-		
-     $session=session();
-    
-		 $dato = array('titulo' => 'Todos los Productos');
-		 $productoModel = new Producto_Model();
-		 $data['producto'] = $productoModel->orderBy('id', 'DESC')->findAll();
-         
-      echo view('front/head_view_crud', $dato);
-      echo view('front/nav_view');
-      echo view('back/carrito/productos_catalogo_view',$data);
-      echo view('front/footer_view');
 	
-	}
    //muestro el carrito
     public function muestra() {
 
@@ -48,7 +35,7 @@ class carrito_controller extends BaseController{
 
     }
     //agrega items al carrito
-  public function add() {
+  public function add() {      
 
         $cart = \Config\Services::Cart();
         $request = \Config\Services::request();
@@ -56,11 +43,11 @@ class carrito_controller extends BaseController{
         $cart->insert(array(
         'id'      =>  $request->getPost('id'),
         'qty'     =>  1,
-        'name'    => $request->getPost('nombre_prod'),
-        'price'   => $request->getPost('precio_vta'),
+        'name'    => $request->getPost('nombre_producto'),
+        'price'   => $request->getPost('precio_venta'),
        
         ));
-       
+       //cart->destroy();
           return redirect()->back()->withInput();
     }
   
@@ -92,8 +79,8 @@ class carrito_controller extends BaseController{
           $cart->update(array(
             'id'      => $request->getPost('id'),
             'qty'     =>  1,
-            'price'   => $request->getPost('precio_Vta'),
-            'name'    => $request->getPost('nombre_prod'),
+            'price'   => $request->getPost('precio_venta'),
+            'name'    => $request->getPost('nombre_producto'),
    
     ));
         return redirect()->back()->withInput();
@@ -137,7 +124,7 @@ class carrito_controller extends BaseController{
     $cart = \Config\Services::cart();//para que incluya el $cart
     $cart->destroy();
 
-  return redirect()->to(base_url('carrito_compra'));
+  return redirect()->to(base_url('carrito'));
 
 }
 

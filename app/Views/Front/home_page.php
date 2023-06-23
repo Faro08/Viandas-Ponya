@@ -21,6 +21,12 @@
                     </div>
                 </div>
                 <p class="fs-5">Lun - Dom 11:00 - 23:00</p>
+                <?php if (session()->perfil_id !=1): ?>
+                <div class="mx-auto mt-2 mb-5">
+                    <a class="btn btn-lg button-ordenarOnline font-handlee" type="button"
+                        href="<?php echo base_url('catalogo-productos');?>">ORDENAR ONLINE! ></a>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
         <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">

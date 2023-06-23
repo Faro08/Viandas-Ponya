@@ -14,7 +14,7 @@
         <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
         <?php $validation = \Config\Services::validation(); ?>
 
-        <div class="container mt-1 mb-1 d-flex justify-content-center">
+        <div class="container mt-1 mb-5 d-flex justify-content-center">
             <div class="card" style="width: 50%;">
                 <div class="card-header text-center">
                     <!-- titulo del formulario-->
@@ -108,9 +108,10 @@
                             <label for="imagen">Imagen</label>
                             <input type="file" class="form-control-file" name="imagen">
                         </div>
-
-                        <input type="submit" value="Enviar" class="btn btn-success">
-                        <a class="btn btn-danger" href="<?php echo base_url('crear');?>">Cancelar</a>
+                        <div class="mt-2">
+                            <input type="submit" value="Enviar" class="btn btn-success">
+                            <a class="btn btn-danger" href="<?php echo base_url('crear');?>">Cancelar</a>
+                        </div>
                     </div>
                 </form>
             </div>

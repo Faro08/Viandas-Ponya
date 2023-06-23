@@ -3,10 +3,10 @@
         <h1>Crud Usuarios</h1>
     </div>
     <div class="mt-3">
-        <div class="container mt-5">
+        <div class="container mt-4">
             <div class="d-flex justify-content-end">
                 <a href="<?php echo site_url('/crear-usuario') ?>" class="btn btn-success m-1 ">Agregar Usuario</a>
-                <a href="<?php echo site_url('/wip') ?>" class="btn btn-secondary m-1">Dados de baja</a>
+                <a href="<?php echo site_url('/usuarios-eliminados') ?>" class="btn btn-secondary m-1">Dados de baja</a>
             </div>
         </div>
         <div class="container">
@@ -21,6 +21,7 @@
                         <th> email </th>
                         <th> perfil </th>
                         <th> direccion </th>
+                        <th> accion </th>
                     </tr>
                 </thead>
 
@@ -35,15 +36,23 @@
                         <td> <?php echo $usuario['apellido'] ?> </td>
                         <td> <?php echo $usuario['usuario'] ?> </td>
                         <td> <?php echo $usuario['email'] ?> </td>
-                        <td> <?php echo $usuario['perfil_id'] ?> </td>
+                        <td>
+                            <?php foreach($perfiles as $perfil): ?>
+                            <?php if($usuario['perfil_id'] === $perfil['id']):?>
+                            <?php echo $perfil['descripcion']?>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+                        </td>
                         <td> <?php echo $usuario['direccion'] ?> </td>
 
                         <td>
                             <!-- borrar/editar --->
                             <a href="<?php echo base_url('editar-usuario/'.$usuario['id']);?>" class="btn btn-primary"
                                 type="button">Editar</a>
+                            <?php if(session()->id !== $usuario['id']) : ?>
                             <a href="<?php echo base_url('eliminar-usuario/'.$usuario['id']);?>" class="btn btn-danger"
-                                type="button">Borrar</a>
+                                type="button">Dar baja</a>
+                            <?php endif; ?>
 
                         </td>
                     </tr>

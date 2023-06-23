@@ -3,7 +3,7 @@
     <header class="fixed-top bg-header">
         <nav class="navbar navbar-expand-lg" data-bs-theme="dark"
             style="box-shadow: 0 2px 9px -1px hsl(0deg 2% 48% / 60%)">
-
+            <?php print_r(session()->perfil_id)?>
             <div class="container-fluid nav-container">
                 <a class="navbar-brand" href="<?php echo base_url('');?>">
                     <img class="img-fluid header-logo"
@@ -33,10 +33,10 @@
                             <a class="nav-link" href="<?php echo base_url('crud-usuarios');?>">Usuarios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('wip');?>">Ventas</a>
+                            <a class="nav-link" href="<?php echo base_url('compras');?>">Ventas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('wip');?>">Consultas</a>
+                            <a class="nav-link" href="<?php echo base_url('consultas');?>">Consultas</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -51,7 +51,7 @@
 
                             <ul class="dropdown-menu">
                                 <li>
-                                    <p class="dropdown-item">Administrador: <?php echo session('nombre'); ?></p>
+                                    <p class="dropdown-item">Administrador: <br><?php echo session('nombre'); ?></p>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -74,18 +74,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('catalogo-productos');?>">Platos</a>
-                        </li>
-
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Viandas
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Semanales</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Mensuales</a></li>
-                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('about');?>">Nosotros</a>
@@ -114,7 +102,8 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('login');?>">Mis compras</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('compras');?>">Mis compras</a>
+                                </li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -122,12 +111,27 @@
                                 </li>
                             </ul>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('contact');?>"><img class="icon-color-white"
+                            <?php 
+                            $session = session();
+                            $cart = \Config\Services::cart();
+                            $cart = $cart->contents(); 
+                            
+                            if(empty($cart)):?>
+
+                            <a class="nav-link" href="<?php echo base_url('carrito');?>"><img class="icon-color-white"
                                     src="<?php echo base_url("assets/bootstrap-icons-1.10.4/cart.svg");?>"
                                     alt="icono carrito" width="25" height="25">
                             </a>
+                            <?php else : ?>
+                            <a class="nav-link" href="<?php echo base_url('carrito');?>"><img class="icon-color-white"
+                                    src="<?php echo base_url("assets/bootstrap-icons-1.10.4/cart-check-fill.svg");?>"
+                                    alt="icono carrito" width="25" height="25">
+                            </a>
+                            <?php endif ; ?>
                         </li>
+
 
                     </ul>
                 </div>
@@ -145,16 +149,7 @@
                             <a class="nav-link" href="<?php echo base_url('catalogo-productos');?>">Platos</a>
                         </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Viandas
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Semanales</a></li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('wip');?>">Mensuales</a></li>
-                            </ul>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('about');?>">Nosotros</a>
                         </li>
@@ -182,11 +177,7 @@
                                 </li>
                                 <li><a class="dropdown-item" href="<?php echo base_url('register');?>">Registrarse</a>
                                 </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="<?php echo base_url('logout');?>">Salir</a>
-                                </li>
+
                             </ul>
                         </li>
                     </ul>

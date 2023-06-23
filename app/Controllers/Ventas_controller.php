@@ -1,12 +1,13 @@
 <?php
 namespace App\Controllers;
 use CodeIgniter\Controller;
-use App\Models\productModel;
+Use App\Models\producto_model;
 use App\Models\Ventas_cabecera_model;
 use App\Models\Ventas_detalle_model;
+use App\Models\usuarios_model;
 
 
-class VentasController extends Controller
+class Ventas_Controller extends Controller
 {
     public function __construct() {
 
@@ -16,26 +17,18 @@ class VentasController extends Controller
 
 
      }
-     // public function catalogo(){
-     //     $session=session();
-     //     $dato = array('titulo'=>'Todos los productos')
-     //     $productoModel=new ProductModel();
-     //     $data['producto']=$productoModel->orderBy('id','DESC')->findAll();
-     //     echo view('front/header',$dato)
-     //     echo view('front/navbar');
-     //     echo view('backend/catalogo', $data);
-     //     echo view('front/footer');
-     // }
-
 
 public function factura($venta_id){
 
+
+
     $detalle_ventas = new Ventas_detalle_model();
     $data['ventaDetalle']=$detalle_ventas->getDetalles($venta_id);
-        echo view('front/header');
-        echo view('front/navbar');
-        echo view('backend/factura', $data);
-        echo view('front/footer');
+        $dato['titulo']='Factura'; 
+        echo view('front/head_view', $dato);
+        echo view('front/nav_view');
+        echo view('back/factura', $data);
+        echo view('front/footer_view');
     }
 
 
@@ -46,19 +39,22 @@ public function factura($venta_id){
         if($perfil == '1'){
             $detalle_ventas = new Ventas_cabecera_model();
             $data['ventaDetalle'] = $detalle_ventas ->orderBy('id','DESC')->findall();
-            
-                echo view('front/header');
-                echo view('front/navbar');
-                echo view('backend/vista_ventas', $data);
-                echo view('front/footer');
+            $usuarios_model = new usuarios_model();
+            $data['usuarios'] = $usuarios_model->orderBy('id', 'DESC')->findAll();
+
+            $dato['titulo']='Ventas'; 
+                echo view('front/head_view', $dato);
+                echo view('front/nav_view');
+                echo view('back/ventas/vista_ventas', $data);
+                echo view('front/footer_view');
             } else if ($perfil == '2') {
                 $detalle_ventas = new Ventas_cabecera_model();
                 $data['ventaDetalle'] = $detalle_ventas->where('usuario_id', $id)->orderBy('id', 'DESC')->findAll();
-                
-                echo view('front/header');
-                echo view('front/navbar');
-                echo view('backend/vista_ventas', $data);
-                echo view('front/footer');
+                $dato['titulo']='Mis Compras'; 
+                echo view('front/head_view', $dato);
+                echo view('front/nav_view');
+                echo view('back/ventas/vista_ventas', $data);
+                echo view('front/footer_view');
             }
         }
 
@@ -78,7 +74,7 @@ public function comprar_carrito()
     $ventaCabecera = new Ventas_cabecera_model();
     $id_session=intval(session()->id);
 
-    $fechaActual = date('Y-m-d'); // Obtener la fecha actual en el formato deseado
+    $fechaActual = date('Y-m-d H:i:s'); // Obtener la fecha actual en el formato deseado
 
     $idcabecera = $ventaCabecera->insert([
         "total_venta" => $montoTotal,
@@ -86,7 +82,7 @@ public function comprar_carrito()
         "fecha" => $fechaActual // Agregar la fecha actual al array de datos
     ]);
     $ventaDetalle = new Ventas_detalle_model();
-    $productModel = new productModel();
+    $productModel = new producto_model();
 
     foreach ($productos as $producto) {
         $ventaDetalle->insert([
@@ -105,5 +101,6 @@ public function comprar_carrito()
         $productModel->update($producto["id"], ['stock' => $newStock]);
     }
     $cart->destroy();
-    return redirect()->back()->withInput();
+    session()->setFlashdata('success', 'Gracias por tu compra!');
+    return redirect()->to('/carrito');
 }}
