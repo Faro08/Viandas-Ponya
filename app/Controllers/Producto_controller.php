@@ -135,14 +135,6 @@ class Producto_controller extends Controller
 
     }
 
-      
-
-      
-        
- 
-        
-    
-        
     // show single producto
     public function singleproducto($id = null){
         

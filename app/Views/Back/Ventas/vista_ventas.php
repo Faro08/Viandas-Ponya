@@ -13,6 +13,7 @@
                         <th> Usuario</th>
                         <th> Fecha</th>
                         <th> Total </th>
+                        <th> Detalles</th>
                     </tr>
                 </thead>
 
@@ -31,6 +32,12 @@
                         </td>
                         <td> <?php echo  $venta['fecha']  ?> </td>
                         <td> <?php echo $venta['total_venta'] ?> </td>
+                        <td>
+                            <?php // Imagen
+                          $path = '<img src='. base_url("assets/bootstrap-icons-1.10.4/search.svg"). ' width="25" height="25" alt="icono carrito">';
+                            echo anchor('detalles-venta/' . $venta['id'], $path); 
+                            ?>
+                        </td>
                     </tr>
                     <?php endforeach; ?>
                     <?php endif; ?>

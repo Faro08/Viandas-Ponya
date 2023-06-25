@@ -88,6 +88,8 @@ $routes->get('/leer-consulta/(:num)', 'Consultas_controller::atender_consulta/$1
 
 /* ventas */
 $routes->get('/compras', 'Ventas_controller::ventas',['filter' => 'auth']);
+$routes->get('/detalles-venta/(:num)', 'Ventas_controller::factura/$1',['filter' => 'auth']);
+
 
 
 

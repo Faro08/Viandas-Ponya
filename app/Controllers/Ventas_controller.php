@@ -20,18 +20,16 @@ class Ventas_Controller extends Controller
 
 public function factura($venta_id){
 
-
-
     $detalle_ventas = new Ventas_detalle_model();
     $data['ventaDetalle']=$detalle_ventas->getDetalles($venta_id);
         $dato['titulo']='Factura'; 
         echo view('front/head_view', $dato);
         echo view('front/nav_view');
-        echo view('back/factura', $data);
+        echo view('back/usuario/welcome', $data);
         echo view('front/footer_view');
     }
 
-
+    /* Listado de ventas */
     public function ventas(){
         $session = session();
         $id=$session->get('id');
@@ -47,21 +45,19 @@ public function factura($venta_id){
                 echo view('front/nav_view');
                 echo view('back/ventas/vista_ventas', $data);
                 echo view('front/footer_view');
-            } else if ($perfil == '2') {
-                $detalle_ventas = new Ventas_cabecera_model();
-                $data['ventaDetalle'] = $detalle_ventas->where('usuario_id', $id)->orderBy('id', 'DESC')->findAll();
-                $dato['titulo']='Mis Compras'; 
-                echo view('front/head_view', $dato);
-                echo view('front/nav_view');
-                echo view('back/ventas/vista_ventas', $data);
-                echo view('front/footer_view');
-            }
+        } else if ($perfil == '2') {
+            $detalle_ventas = new Ventas_cabecera_model();
+            $data['ventaDetalle'] = $detalle_ventas->where('usuario_id', $id)->orderBy('id', 'DESC')->findAll();
+            $dato['titulo']='Mis Compras'; 
+            echo view('front/head_view', $dato);
+            echo view('front/nav_view');
+            echo view('back/ventas/vista_ventas', $data);
+            echo view('front/footer_view');
         }
+    }
 
-
-
-public function comprar_carrito()
-{
+public function comprar_carrito(){
+    
     $cart = \Config\Services::cart();
     $productos = $cart->contents();
     $request = \Config\Services::request();
