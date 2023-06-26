@@ -17,11 +17,8 @@
                         <p class="m-0">Elegí el <a class="color-4" style="text-decoration: none;"
                                 href="<?php echo base_url('catalogo-productos');?>"><b>plato
                                     del
-                                    día</b></a> y porciones que desees, o
-                            suscribite a nuestro <a class="color-4" style="text-decoration: none;"
-                                href="<?php echo base_url('wip');?>"><b>sistema
-                                    de
-                                    viandas</b></a>. Proporciona tus datos de contacto, tu dirección y confirma el
+                                    día</b></a> y porciones que desees. Proporciona tus datos de contacto, tu dirección
+                            y confirma el
                             horario
                             disponible para
                             el envió segun tu ubicación.</p>
