@@ -8,7 +8,6 @@
             <table class="table table-bordered" id="">
                 <thead>
                     <tr>
-                        <!-- filas de la tabla --->
                         <th> Id</th>
                         <th> Usuario</th>
                         <th> Fecha</th>
@@ -18,9 +17,9 @@
                 </thead>
 
                 <tbody>
-                    <!--estructura de repeticion para mostrar productos --->
                     <?php if($ventaDetalle): ?>
                     <?php foreach($ventaDetalle as $venta): ?>
+                    <?php $ventaId = $venta['id']?>
                     <tr>
                         <td> <?php echo $venta['id'] ?> </td>
                         <td>
@@ -39,34 +38,44 @@
                             ?>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
-                                Launch demo modal
+                                Launch demo modal <?php echo $ventaId ?>
                             </button>
                         </td>
                     </tr>
+                    <!-- MODAL mostrar detalles venta -->
+                    <?php echo $ventaId ?>
+                    <?php
+                    $detalle_ventas = new \App\Models\Ventas_detalle_model();
+                    $ventaDetalle = $detalle_ventas->getDetalles($ventaId);
+                    ?>
+                    <div class="modal" id="exampleModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Venta: <?php echo $venta['id'] ?> </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Modal body text goes here.</p>
+                                    <?php print_r($ventaDetalle) ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <?php endforeach; ?>
+                    <?php echo $ventaId ?>
                     <?php endif; ?>
+                    <?php echo $ventaId ?>
                 </tbody>
             </table>
+            <?php echo $ventaId ?>
+        </div>
 
-        </div>
-        <!-- MODAL mostrar detalles venta -->
-        <div class="modal" id="exampleModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Modal body text goes here.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <?php else :?>
         <div class="d-flex justify-content-center mt-3">
             <h1>Mis compras</h1>
