@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="table-responsive-sm">
                     <table class="table table-bordered table-hover  table-striped ml-3">
-                        <tr>
+                        <tr class="table-light">
                             <td>id</td>
                             <td>Nombre producto</td>
                             <td>Precio</td>
@@ -52,7 +52,7 @@
                     echo  form_hidden('cart[' . $item['id'] . '][price]', $item['price']);
                     echo  form_hidden('cart[' . $item['id'] .'][qty]', $item['qty']);
             ?>
-                        <tr>
+                        <tr class="table-light">
                             <td> <?php echo $i++; ?> </td>
                             <td> <?php echo $item['name']; ?> </td>
                             <td>$ <?php echo number_format($item['price'], 2); ?> </td>

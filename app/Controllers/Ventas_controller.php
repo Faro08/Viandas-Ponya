@@ -18,15 +18,18 @@ class Ventas_Controller extends Controller
 
      }
 
-public function factura($venta_id){
-
-    $detalle_ventas = new Ventas_detalle_model();
-    $data['ventaDetalle']=$detalle_ventas->getDetalles($venta_id);
-        $dato['titulo']='Factura'; 
-        echo view('front/head_view', $dato);
-        echo view('front/nav_view');
-        echo view('back/usuario/welcome', $data);
-        echo view('front/footer_view');
+    public function factura($venta_id){
+        $usuarios_model = new usuarios_model();
+        $data['usuarios'] = $usuarios_model->orderBy('id', 'DESC')->findAll();
+        $venta = new Ventas_cabecera_model();
+        $data['venta'] = $venta ->where('id', $venta_id)->first();
+        $detalle_ventas = new Ventas_detalle_model();
+        $data['ventaDetalle']=$detalle_ventas->getDetalles($venta_id);
+         $dato['titulo']='Venta'; 
+            echo view('front/head_view', $dato);
+            echo view('front/nav_view');
+            echo view('back/ventas/venta-detalles', $data);
+            echo view('front/footer_view');
     }
 
     /* Listado de ventas */
